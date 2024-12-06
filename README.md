@@ -56,10 +56,12 @@ public static int sumarAnillo(int[][] matriz, int d, int k) {
 }
 ```
 ---
-[!NOTE]
-El parámetro `k` representa el índice del anillo (comenzando desde el borde exterior como `k = 1`), y `d` es la dimensión de la matriz.  
-La función calcula la suma de los elementos correspondientes al anillo seleccionado. 
+
+>[!IMPORTANT]
+El parámetro `k` debe ser entendido como el índice del anillo (comenzando desde el borde exterior como `k = 0` empezando a contar desde 0), y `d` define la dimensión de la matriz.  
+Asegúrate de utilizar estos valores correctamente para evitar errores en el cálculo. 
 
 #### Ejemplo:
 Para una matriz `5x5` y `k = 1`, la suma incluye los bordes externos de la matriz.  
 Si `k = 2`, la suma incluye el siguiente anillo interno.
+![image](https://github.com/user-attachments/assets/adf57269-cca0-44c7-87d2-feca90a56c03)
