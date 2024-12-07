@@ -83,3 +83,27 @@ Para `k = 0`, el algoritmo incluye todos los elementos del borde exterior:
 La suma de los elementos del anillo externo (`k=0`) es `377`.
 
 ## 🌀 Notacion big O
+La notación Big O es una herramienta utilizada en la informática para describir la complejidad algorítmica de un algoritmo, es decir, cómo crece el tiempo de ejecución o el uso de recursos en función del tamaño de la entrada. En el caso de `sumarAnillo`, analizaremos cómo la complejidad temporal cambia según la dimensión de la matriz `d`.
+
+### Análisis de Complejidad Temporal del Algoritmo `sumarAnillo`
+La complejidad temporal de la función es **O(d)**. Esto se debe a que el algoritmo recorre los elementos de la capa específica, que tiene una longitud proporcional `d` (la dimensión de la matriz). No importa qué valor de `k` se pase, el número de elementos que se suman es siempre proporcional a `d`.
+
+#### Detalles de la iteración:
+- **Primera y última fila**: Se recorren `d - 2k` elementos en cada una.
+- **Columnas laterales**: Se recorren `d - 2k - 2` elementos.
+
+El número total de elementos en la capa es **4(d−2k−1)**, lo que es **O(d)**.
+
+#### Complejidad Espacial
+La complejidad espacial del algoritmo es **O(1)**, ya que no se utiliza memoria adicional que crezca con la entrada. La única memoria utilizada es para las variables `sum` y `i`.
+
+## Evaluación y Resultados
+La sección de Evaluación y Resultados se centra en la medición y análisis de la complejidad temporal del algoritmo `sumarAnillo`, junto con la verificación de su desempeño mediante pruebas empíricas en diferentes matrices de tamaño `d x d`. Este proceso permite validar que la complejidad temporal teórica **O(d)** se refleja en la práctica.
+
+### Metodología de Evaluación:
+1. **Pruebas de rendimiento**: Se implementaron matrices de diferentes tamaños (por ejemplo, 1000x1000, 5000x5000, 15000x15000, y 20000x20000) y se calculó la suma de anillos usando el algoritmo `sumarAnillo` para distintos valores de k (0 para el anillo externo, 1 para el siguiente anillo, etc.).
+2. **Medición de tiempo de ejecución**: Se usó un temporizador de ejecución para registrar el tiempo que tarda el algoritmo en procesar cada anillo de la matriz. Estos tiempos se registraron y analizaron para determinar si la complejidad temporal calculada **O(d)** se mantenía consistente.
+3. **Resultados comparativos**: Se compararon los tiempos de ejecución con el tamaño de la matriz `d` y con el índice `k` de cada anillo por medio de una grafica, verificando si la relación de tiempo se mantenía proporcional a `d`.
+
+### Resultados de Prueba
+A continuación se muestran los resultados de tiempo de ejecución de `sumarAnillo` para matrices de diferentes tamaños y para el anillo más externo (k=0):
