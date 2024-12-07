@@ -1,4 +1,4 @@
-# Evaluación de la Complejidad Temporal del Algoritmo "`sumarAnillo`"(Avance)
+# Evaluación de la Complejidad Temporal del Algoritmo "`sumarAnillo`"
 
 Este proyecto analiza el algoritmo `sumarAnillo`, diseñado para calcular la suma de los elementos de un "anillo" dentro de una matriz cuadrada. Se mide la complejidad temporal del algoritmo y se evalúa su desempeño con diferentes tamaños de matrices, utilizando la notación Big O para analizar su escalabilidad.
 
@@ -101,8 +101,12 @@ La sección de Evaluación y Resultados se centra en la medición y análisis de
 
 ### Metodología de Evaluación:
 1. **Pruebas de rendimiento**: Se implementaron matrices de diferentes tamaños (por ejemplo, 1000x1000, 5000x5000, 15000x15000, y 20000x20000) y se calculó la suma de anillos usando el algoritmo `sumarAnillo` para distintos valores de k (0 para el anillo externo, 1 para el siguiente anillo, etc.).
-2. **Medición de tiempo de ejecución**: Se usó un temporizador de ejecución para registrar el tiempo que tarda el algoritmo en procesar cada anillo de la matriz. Estos tiempos se registraron y analizaron para determinar si la complejidad temporal calculada **O(d)** se mantenía consistente.
-3. **Resultados comparativos**: Se compararon los tiempos de ejecución con el tamaño de la matriz `d` y con el índice `k` de cada anillo por medio de una grafica, verificando si la relación de tiempo se mantenía proporcional a `d`.
+   
+>[!TIP]
+Si estás implementando este algoritmo en un entorno con limitaciones de memoria, asegúrate de optimizar la matriz de entrada y evitar copias innecesarias de la misma.
+
+3. **Medición de tiempo de ejecución**: Se usó un temporizador de ejecución para registrar el tiempo que tarda el algoritmo en procesar cada anillo de la matriz. Estos tiempos se registraron y analizaron para determinar si la complejidad temporal calculada **O(d)** se mantenía consistente.
+4. **Resultados comparativos**: Se compararon los tiempos de ejecución con el tamaño de la matriz `d` y con el índice `k` de cada anillo por medio de una grafica, verificando si la relación de tiempo se mantenía proporcional a `d`.
 
 ### Resultados de Prueba
 Se construyó un gráfico que representa la relación entre el tamaño de la matriz d y el tiempo de ejecución. La gráfica muestra que el tiempo de ejecución crece de manera lineal conforme aumenta d, validando la evaluación de la complejidad temporal.
@@ -112,7 +116,7 @@ Se construyó un gráfico que representa la relación entre el tamaño de la mat
 
 ![Figure_1](https://github.com/user-attachments/assets/7aa588b8-d1df-4c75-b99a-84193790dc20)
 
-## Conclusión
+## 🏁 Conclusión
 El algoritmo sumarAnillo ha sido validado empíricamente, confirmando que su complejidad temporal es **O(d)** y su complejidad espacial es **O(1)**. El análisis y las pruebas mostraron que el tiempo de ejecución crece de manera lineal con el tamaño de la matriz, demostrando su eficiencia y escalabilidad en matrices grandes de hasta `20,000 x 20,000`.
 
 Este algoritmo es ideal para aplicaciones que requieren sumar elementos en capas específicas de matrices, como en análisis de datos. Las pruebas y el análisis sugieren que se puede usar eficazmente en entornos con limitaciones de memoria y que es adaptable para optimizar otras operaciones relacionadas con matrices.
