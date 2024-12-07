@@ -12,7 +12,6 @@ Este proyecto analiza el algoritmo `sumarAnillo`, diseñado para calcular la sum
 4. [Notacion big O](#código-principal)
 5. [Evaluación y Resultados](#evaluación-y-resultados)
 6. [Conclusión](#conclusión)
-7. [Referencias](#referencias)
 
 ---
 
@@ -97,7 +96,7 @@ El número total de elementos en la capa es **4(d−2k−1)**, lo que es **O(d)*
 #### Complejidad Espacial
 La complejidad espacial del algoritmo es **O(1)**, ya que no se utiliza memoria adicional que crezca con la entrada. La única memoria utilizada es para las variables `sum` y `i`.
 
-## Evaluación y Resultados
+## 📊 Evaluación y Resultados
 La sección de Evaluación y Resultados se centra en la medición y análisis de la complejidad temporal del algoritmo `sumarAnillo`, junto con la verificación de su desempeño mediante pruebas empíricas en diferentes matrices de tamaño `d x d`. Este proceso permite validar que la complejidad temporal teórica **O(d)** se refleja en la práctica.
 
 ### Metodología de Evaluación:
@@ -106,4 +105,14 @@ La sección de Evaluación y Resultados se centra en la medición y análisis de
 3. **Resultados comparativos**: Se compararon los tiempos de ejecución con el tamaño de la matriz `d` y con el índice `k` de cada anillo por medio de una grafica, verificando si la relación de tiempo se mantenía proporcional a `d`.
 
 ### Resultados de Prueba
-A continuación se muestran los resultados de tiempo de ejecución de `sumarAnillo` para matrices de diferentes tamaños y para el anillo más externo (k=0):
+Se construyó un gráfico que representa la relación entre el tamaño de la matriz d y el tiempo de ejecución. La gráfica muestra que el tiempo de ejecución crece de manera lineal conforme aumenta d, validando la evaluación de la complejidad temporal.
+#### Gráfico de tiempo de ejecución vs. tamaño de la matriz:
+-**Eje x**: Dimencion de la matriz `d`.
+-**Eje y**: Tiempo de ejecución en segundos (s).
+
+![Figure_1](https://github.com/user-attachments/assets/7aa588b8-d1df-4c75-b99a-84193790dc20)
+
+## Conclusión
+El algoritmo sumarAnillo ha sido validado empíricamente, confirmando que su complejidad temporal es **O(d)** y su complejidad espacial es **O(1)**. El análisis y las pruebas mostraron que el tiempo de ejecución crece de manera lineal con el tamaño de la matriz, demostrando su eficiencia y escalabilidad en matrices grandes de hasta `20,000 x 20,000`.
+
+Este algoritmo es ideal para aplicaciones que requieren sumar elementos en capas específicas de matrices, como en análisis de datos. Las pruebas y el análisis sugieren que se puede usar eficazmente en entornos con limitaciones de memoria y que es adaptable para optimizar otras operaciones relacionadas con matrices.
