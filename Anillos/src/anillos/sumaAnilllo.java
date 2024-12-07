@@ -2,7 +2,7 @@ package anillos;
 import java.util.Random;
 public class sumaAnilllo {
     public static void main(String[] args) {
-        int[] dimenciones={20,40,60,80,100};
+        int[] dimenciones={1000,5000,10000,15000,20000};
         Random rd=new Random();
         for(int i=0;i<dimenciones.length;i++){
             int n=dimenciones[i];
@@ -19,14 +19,10 @@ public class sumaAnilllo {
                 }
                 System.out.println();
             }*/
-            double[] tiempos=Calculartiempos(matriz,n);
-            System.out.println("Tiempos calculados para la matriz de "+n+":");
-            for(double tiempo : tiempos) {
-                System.out.print(tiempo/1_000_000_000.0+" ");
-            }
-            System.out.println();
-        }       
-       
+            double tiempo=Calculartiempos(matriz,n);
+            System.out.println("Tiempo calculados para la matriz de "+n+":");
+            System.out.println(tiempo/1_000_000_000.0+" ");
+        }         
     }
     public static int sumarAnillo(int[][] matriz, int d, int k){
         k--;
@@ -41,15 +37,19 @@ public class sumaAnilllo {
         }
         return sum;
     }
-    public static double[] Calculartiempos(int[][] matriz, int d){
-        double []tiempos=new double[d/2+(d%2==0 ? 0: 1)];
-        for(int i=0;i<(d/2+(d%2==0 ? 0: 1));i++){
+    public static double Calculartiempos(int[][] matriz, int d){
+        double tiempo=0;
+        long inicio=System.nanoTime();
+        int resultado=sumarAnillo(matriz,d,0);
+        long fin=System.nanoTime();
+        tiempo=fin-inicio;    
+        /*for(int i=0;i<(d/2+(d%2==0 ? 0: 1));i++){
             //calculamos el tiempo de la funcion
             long inicio=System.nanoTime();
             int resultado=sumarAnillo(matriz,d,i);
             long fin=System.nanoTime();
             tiempos[i]=fin-inicio;            
-        }
-        return tiempos;
+        }*/
+        return tiempo;
     }
 }
