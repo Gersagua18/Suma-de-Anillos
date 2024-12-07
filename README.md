@@ -55,7 +55,6 @@ public static int sumarAnillo(int[][] matriz, int d, int k) {
     return sum;
 }
 ```
----
 
 >[!IMPORTANT]
 El parámetro `k` debe ser entendido como el índice del anillo (comenzando desde el borde exterior como `k = 0` empezando a contar desde 0), y `d` define la dimensión de la matriz.  
@@ -81,6 +80,7 @@ Para `k = 0`, el algoritmo incluye todos los elementos del borde exterior:
 #### Resultado: 
 La suma de los elementos del anillo externo (`k=0`) es `377`.
 
+---
 ## 🌀 Notacion big O
 La notación Big O es una herramienta utilizada en la informática para describir la complejidad algorítmica de un algoritmo, es decir, cómo crece el tiempo de ejecución o el uso de recursos en función del tamaño de la entrada. En el caso de `sumarAnillo`, analizaremos cómo la complejidad temporal cambia según la dimensión de la matriz `d`.
 
@@ -96,6 +96,7 @@ El número total de elementos en la capa es **4(d−2k−1)**, lo que es **O(d)*
 #### Complejidad Espacial
 La complejidad espacial del algoritmo es **O(1)**, ya que no se utiliza memoria adicional que crezca con la entrada. La única memoria utilizada es para las variables `sum` y `i`.
 
+---
 ## 📊 Evaluación y Resultados
 La sección de Evaluación y Resultados se centra en la medición y análisis de la complejidad temporal del algoritmo `sumarAnillo`, junto con la verificación de su desempeño mediante pruebas empíricas en diferentes matrices de tamaño `d x d`. Este proceso permite validar que la complejidad temporal teórica **O(d)** se refleja en la práctica.
 
@@ -116,6 +117,7 @@ Se construyó un gráfico que representa la relación entre el tamaño de la mat
 
 ![Figure_1](https://github.com/user-attachments/assets/7aa588b8-d1df-4c75-b99a-84193790dc20)
 
+---
 ## 🏁 Conclusión
 El algoritmo sumarAnillo ha sido validado empíricamente, confirmando que su complejidad temporal es **O(d)** y su complejidad espacial es **O(1)**. El análisis y las pruebas mostraron que el tiempo de ejecución crece de manera lineal con el tamaño de la matriz, demostrando su eficiencia y escalabilidad en matrices grandes de hasta `20,000 x 20,000`.
 
