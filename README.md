@@ -9,9 +9,10 @@ Este proyecto analiza el algoritmo `sumarAnillo`, diseñado para calcular la sum
 1. [Descripción](#descripción)
 2. [Requisitos](#requisitos)
 3. [Código Principal](#código-principal)
-4. [Evaluación y Resultados](#evaluación-y-resultados)
-5. [Conclusión](#conclusión)
-6. [Referencias](#referencias)
+4. [Notacion big O](#código-principal)
+5. [Evaluación y Resultados](#evaluación-y-resultados)
+6. [Conclusión](#conclusión)
+7. [Referencias](#referencias)
 
 ---
 
@@ -61,7 +62,24 @@ public static int sumarAnillo(int[][] matriz, int d, int k) {
 El parámetro `k` debe ser entendido como el índice del anillo (comenzando desde el borde exterior como `k = 0` empezando a contar desde 0), y `d` define la dimensión de la matriz.  
 Asegúrate de utilizar estos valores correctamente para evitar errores en el cálculo. 
 
-#### Ejemplo:
-Para una matriz `5x5` y `k = 1`, la suma incluye los bordes externos de la matriz.  
-Si `k = 2`, la suma incluye el siguiente anillo interno.
+### Ejemplo Desarollado:
+Consideramos la siguiente matriz cuadrada 6x6.
+
 ![image](https://github.com/user-attachments/assets/adf57269-cca0-44c7-87d2-feca90a56c03)
+
+#### Parametros:
+- **`k = 0`**: Corresponde al anillo más externo.
+- **`d = 6`***: Dimensión de la matriz.
+
+#### Paso a Paso:
+Para `k = 0`, el algoritmo incluye todos los elementos del borde exterior:
+- **Primera fila**:`1,-8,0,-1,1,2`
+- **Última fial**:`7,-3,-1,0,1,4`
+- **Elementos verticales de las columnas**:
+  - Primera columna: `2,0,4,4`
+  - Última columna: `3,-1,6,0`
+
+#### Resultado: 
+La suma de los elementos del anillo externo (`k=0`) es `377`.
+
+## 🌀 Notacion big O
