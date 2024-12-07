@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt  
 import numpy as np
 
-#tiempos=[7.1E-6,2.35E-5 ,2.17E-5  ,3.0E-5  ,3.02E-5  ]
 tiempos=[1.57E-5  ,2.16E-5 ,3.37E-5 ,4.78E-5 ,1.057E-4   ]  
 dimenciones=[1000,5000,10000,15000,20000]
 tiempos=np.array(tiempos)
